@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4 | CSS Animation</title>
+    <style>
+        @keyframes titleAnim {
+        from {top: -50px;}
+        to {top: 10px;}
+        }
+
+        @keyframes navAnim {
+        from {top: -50px;}
+        to {top: 80px;}
+        }
+
+        @keyframes normalAnim {
+        from {background-color: #666;}
+        to {background-color: #000;}
+        }
+
+        @keyframes highlightAnim {
+        from {background-color: #000;}
+        to {background-color: #666;}
+        }
+
+        h1 {
+            position: absolute;
+            top: 10px;
+            animation-name: titleAnim;
+            animation-duration: 4s;
+        }
+
+        nav {
+            height: 100px;
+            width: 100%;
+            position: absolute;
+            top: 80px;
+            animation-name: navAnim;
+            animation-duration: 4s;
+            background-color: #888;
+        }
+
+        #gallery {
+            width: 95%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 250px auto 0 auto;
+        }
+
+        .gallery-item {
+            height: 200px;
+            width: 400px;
+            margin-bottom: 50px;
+            
+            background-color: #000;
+        }
+
+        .item-n {
+            animation-name: normalAnim;
+            animation-duration: 1s;
+            background-color: #000;
+        }
+
+        .item-h {
+            animation-name: highlightAnim;
+            animation-duration: 1s;
+            background-color: #666;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="title">Title</h1>
+    <nav id="nav"></nav>
+    <div id="gallery">
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -18,24 +18,24 @@
 //     }
 // }
 
-let i = 0;
-let ins = [aCello, aThing, aGuitar];
+// let i = 0;
+// let ins = [aCello, aThing, aGuitar];
 
-function playNext() {
-    //Do the next in the array of instruments
-    i++;
-    ins[i].play();
-}
+// function playNext() {
+//     //Do the next in the array of instruments
+//     i++;
+//     ins[i].play();
+// }
 
-class Instrument {
-      constructor(callback) {
-            this.onComplete = callback;
-       }
+// class Instrument {
+//       constructor(callback) {
+//             this.onComplete = callback;
+//        }
 
-       play() {
-           setTimeout(this.callback, 500);
-       }
-}
+//        play() {
+//            setTimeout(this.callback, 500);
+//        }
+// }
 
 // class Courses {
 //     constructor (name, professor, credits) {
@@ -59,3 +59,31 @@ class Instrument {
 //     }
 
 // }
+
+// let txtStatInput = document.getElementById("txtStatInput");
+// function textFocus() {
+// resetAnimation(txtStatInput);
+// txtStatInput.classList.remove("deselected");
+// txtStatInput.classList.add("selected");
+// }
+// function textLeave() {
+// resetAnimation(txtStatInput);
+// txtStatInput.classList.remove("selected");
+// txtStatInput.classList.add("deselected");
+// }
+
+// function resetAnimation(el) {
+// el.style.animation = 'none';
+// el.offsetHeight; /* trigger reflow*/
+// el.style.animation = null; 
+// }
+
+var divs = document.getElementsByClassName("div");
+init();
+function init() {
+for(let i = 0; i < divs.length; i++) {
+TweenMax.from(divs[i], 
+{ duration: .4, delay: i, alpha: 0, x: -10 } 
+);
+}
+}
